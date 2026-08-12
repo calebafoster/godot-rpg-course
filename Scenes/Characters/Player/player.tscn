@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://clvea5k5h4kvv"]
+[gd_scene load_steps=35 format=3 uid="uid://clvea5k5h4kvv"]
 
+[ext_resource type="Script" path="res://Scripts/Characters/Player/Player.cs" id="1_17bpc"]
 [ext_resource type="Texture2D" uid="uid://dtox0pm0m2ct1" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_000.png" id="1_vx3oj"]
 [ext_resource type="Texture2D" uid="uid://c1flapmkph8l4" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_001.png" id="2_k571i"]
 [ext_resource type="Texture2D" uid="uid://ylg5gr02e1i7" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_002.png" id="3_btj1k"]
@@ -72,6 +73,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_17bpc")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 texture = ExtResource("1_vx3oj")
