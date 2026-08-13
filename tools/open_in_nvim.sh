@@ -15,9 +15,9 @@ PROJECT="$(cd "$SCRIPT_DIR/.." && pwd)"
 # project directory (no sanitization needed), so match that here.
 PIPE="${PROJECT}/server.pipe"
 
-FILE="$1"
-LINE="$2"
-COL="$3"
+FILE="${1}"
+LINE="${2:-0}"
+COL="${3:-0}"
 
 # Vim's :e splits on unescaped spaces, so escape them for the path in the command.
 VIMFILE="${FILE// /\\ }"
