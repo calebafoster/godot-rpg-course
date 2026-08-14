@@ -1,6 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://clvea5k5h4kvv"]
+[gd_scene format=3 uid="uid://clvea5k5h4kvv"]
 
-[ext_resource type="Script" path="res://Scripts/Characters/Player/Player.cs" id="1_17bpc"]
+[ext_resource type="Script" uid="uid://50mk68o1wk77" path="res://Scripts/Characters/Player/Player.cs" id="1_17bpc"]
 [ext_resource type="Texture2D" uid="uid://dtox0pm0m2ct1" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_000.png" id="1_vx3oj"]
 [ext_resource type="Texture2D" uid="uid://c1flapmkph8l4" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_001.png" id="2_k571i"]
 [ext_resource type="Texture2D" uid="uid://ylg5gr02e1i7" path="res://Assets/Sprites/Characters/Player/Idle Blinking/Idle Blinking_002.png" id="3_btj1k"]
@@ -68,19 +68,17 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ogtj2"]
 _data = {
-"Idle": SubResource("Animation_q8l34"),
-"Move": SubResource("Animation_nfh45")
+&"Idle": SubResource("Animation_q8l34"),
+&"Move": SubResource("Animation_nfh45")
 }
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("animPlayerNode", "spriteNode")]
+[node name="Player" type="CharacterBody3D" unique_id=1099894682 node_paths=PackedStringArray("animPlayerNode", "spriteNode")]
 script = ExtResource("1_17bpc")
 animPlayerNode = NodePath("AnimationPlayer")
 spriteNode = NodePath("Sprite3D")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1151000086]
 texture = ExtResource("1_vx3oj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ogtj2")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1736812440]
+libraries/ = SubResource("AnimationLibrary_ogtj2")
