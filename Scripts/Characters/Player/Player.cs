@@ -3,12 +3,28 @@ using System;
 
 public partial class Player : CharacterBody3D
 {
+    [ExportGroup("Required Nodes")]
+    [Export] private AnimationPlayer animPlayerNode;
+    [Export] private Sprite3D spriteNode;
+
+    private Vector2 direction = new();
+
+    public override void _Ready()
+    {
+        animPlayerNode.Play("Idle");
+    }
+
     public override void _PhysicsProcess(double delta)
     {
-        GD.Print("Player Physics");
+        Velocity = new(direction.X, 0, direction.Y);
+        Velocity *= 5;
+
+        MoveAndSlide();
     }
     public override void _Input(InputEvent @event)
     {
-        GD.Print("Player Input!");
+        direction = Input.GetVector(
+                "MoveLeft", "MoveRight", "MoveForward", "MoveBackward"
+        );
     }
 }

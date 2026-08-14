@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://msx7aky3fqts"]
+[gd_scene load_steps=3 format=3 uid="uid://msx7aky3fqts"]
 
-[ext_resource type="Script" uid="uid://ddfqukd5y4rm3" path="res://Scripts/Levels/Main.cs" id="1_5wxi6"]
+[ext_resource type="Script" path="res://Scripts/Levels/Main.cs" id="1_5wxi6"]
 [ext_resource type="PackedScene" uid="uid://clvea5k5h4kvv" path="res://Scenes/Characters/Player/player.tscn" id="2_tom2l"]
 
-[node name="Main" type="Node3D" unique_id=2021061957]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_5wxi6")
 
-[node name="Player" parent="." unique_id=2042741184 instance=ExtResource("2_tom2l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005733967, 0.21621227, -0.13428068)
+[node name="Player" parent="." instance=ExtResource("2_tom2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000573397, 0.216212, -0.134281)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1462731916]
+[node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.81631)
