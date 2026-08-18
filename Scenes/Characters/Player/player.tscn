@@ -133,8 +133,13 @@ script = ExtResource("34_2iqoh")
 currentState = NodePath("IdleState")
 states = [NodePath("IdleState"), NodePath("MoveState"), NodePath("DashState")]
 
-[node name="DashState" type="Node" parent="StateMachine" unique_id=380583364]
+[node name="DashState" type="Node" parent="StateMachine" unique_id=380583364 node_paths=PackedStringArray("dashTimerNode")]
 script = ExtResource("39_2qsty")
+dashTimerNode = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="StateMachine/DashState" unique_id=1721537821]
+wait_time = 0.4
+one_shot = true
 
 [node name="MoveState" type="Node" parent="StateMachine" unique_id=1873939018]
 script = ExtResource("33_me3gr")

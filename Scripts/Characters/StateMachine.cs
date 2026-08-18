@@ -31,7 +31,9 @@ public partial class StateMachine : Node
         if (newState == null) { return; }
 
         currentState.Notification(5002);
+        GD.Print(currentState);
         currentState = newState;
         currentState.Notification(5001);
+        GD.Print(currentState);
     }
 }
